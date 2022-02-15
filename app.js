@@ -207,6 +207,10 @@ app.use((err, req, res, next) => {
 //     res.send(camp);
 // });
 
-app.listen(3000, () => {
-    console.log('Serving on port 3000');
+// default port for heroku is 80 so it will automatically run the env.PORT
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+    console.log(`Serving on port ${port}`);
 });
