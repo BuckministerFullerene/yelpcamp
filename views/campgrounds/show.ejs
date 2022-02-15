@@ -15,7 +15,6 @@
 
     <div class="row mb-3">
         <div class="col-6">
-                <div id='map' style='width: 400px; height: 300px;' class="mb-5"></div>
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <% campgrnd.images.forEach((img, i) => { %>
@@ -71,6 +70,8 @@
             </button>
         </div>
         <div class="col-6">
+
+            <div id='map' style='width: 400px; height: 300px;' class="mb-5"></div>
             
             <%if(currentUser) {%>
                 <!-- Reviews form -->
