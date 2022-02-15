@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Campground</title>
+</head>
+<body> -->
+    <!-- Page to add a new campground to the database -->
+    <% layout('layouts/boilerplate') %>
+    
+    <div class="row">
+        <h1 class="text-center">New Campground</h1>
+        <div class="col-6 offset-3">
+            <form action="/campgrounds" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+                <p>
+                    <div class="mb-3">
+                        <label class="form-label" for="title">Title</label>
+                        <input class="form-control" type="text" id="title" name="campground[title]" required>
+                        <div class="valid-feedback">
+                            Yeah!
+                        </div>
+                    </div>
+                </p>
+
+                <p>
+                    <div class="mb-3">
+                        <label class="form-label" for="location">Location</label>
+                        <input class="form-control" type="text" id="location" name="campground[location]" required>
+                        <div class="valid-feedback">
+                            Yeah!
+                        </div>
+                    </div>
+                </p>
+
+                <p>
+                    <div class="mb-3">
+                        <!-- <input type="file" name="image" id="image" multiple> -->
+                        <div class="input-group custom-file mb-3">
+                            <input type="file" class="form-control" id="image" name="image" multiple>
+                            <label class="input-group-text text-muted" for="image">Images</label>
+                          </div>
+                        <!-- <label class="form-label" for="image">Image Url</label>
+                        <input class="form-control" type="text" id="image" name="campground[image]" required>
+                        <div class="valid-feedback">
+                            Yeah!
+                        </div> -->
+                    </div>
+                </p>
+
+                <p>
+                    <div class="mb-3">
+                            <label class="form-label" for="price">Campground Price</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="price-label">@</span>
+                            <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="campground[price]" required>
+                            <div class="valid-feedback">
+                                Yeah!
+                            </div>
+                        </div>
+                    </div>
+                </p>
+
+                <p>
+                    <div class="mb-3">
+                        <label class="form-label" for="description">Description</label>
+                        <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea>
+                        <div class="valid-feedback">
+                            Yeah!
+                        </div>
+                    </div>
+                </p>
+                
+                <div class="mb-3">
+                    <button class="btn btn-success">Add Campground</button>
+                </div>
+            </form>
+            <footer class="mb-3">
+                <a href="/campgrounds">All Campgrounds</a>
+            </footer>
+        </div>
+    </div>
+<!-- </body>
+</html> -->

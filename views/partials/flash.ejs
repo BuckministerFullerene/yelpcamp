@@ -1,0 +1,15 @@
+<!-- adding logic to check if there is a success or error message otherwise displays a blank flash -->
+<!-- console.dir(success) displays an empty array if there is no message -->
+<% if(success && success.length) { %> 
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= success %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
+
+<% if(error && error.length) { %> 
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%= error %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>

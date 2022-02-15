@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url("https://res.cloudinary.com/drqx53aen/image/upload/v1643736710/scott-goodwill-y8Ngwq34_Ak-unsplash_q5djqu.jpg");
+  background-size: cover;
+  background-position: center;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  font-family: 'Supermercado One', cursive
+}
+
+.cover-container {
+max-width: 60vw;
+}
+
+.nav-link {
+  padding: 0.25rem 0;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  margin-left: 1rem;
+  border-bottom: 0.25rem solid transparent;
+}
+
+.nav-link:hover{
+  color: rgba(255,255,255,0.5);
+  border-bottom-color:rgba(255,255,255,0.5);
+}
+
+.nav-link.active {
+  color: white;
+  border-bottom-color:white;
+
+}
+
+.btn-secondary, .btn-secondary:hover{
+  color: #333;
+  text-shadow: none;
+}
