@@ -40,38 +40,38 @@
                     </button>
                     <% } %> 
                 </div>
-            <div class="card">
-                <!-- <img src="< %>" class="card-img-top" alt="campgrnd.image"> -->
-                <div class="card-body">
-                  <h5 class="card-title"><%=campgrnd.title%></h5>
-                  <p class="card-text"><%=campgrnd.description%></p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item text-muted"><%=campgrnd.location%></li>
-                  <li class="list-group-item">Submitted by <%=campgrnd.author.username%></li>
-                  <li class="list-group-item">$<%=campgrnd.price%>/night</li>
-                  <!-- <li class="list-group-item">A third item</li> -->
-                </ul>
-                <% if (currentUser && campgrnd.author.equals(currentUser._id)) { %> 
+                <div class="card">
+                    <!-- <img src="< %>" class="card-img-top" alt="campgrnd.image"> -->
                     <div class="card-body">
-                        <a href="/campgrounds/<%=campgrnd._id%>/edit" class="card-link btn btn-info">
-                            Edit Campgrounds Entry
-                        </a>
-                        <form class="d-inline" action="/campgrounds/<%= campgrnd._id %>?_method=DELETE" method='POST'>
-                            <button class="btn btn-danger">
-                                DELETE
-                            </button>     
-                        </form>
+                        <h5 class="card-title"><%=campgrnd.title%></h5>
+                        <p class="card-text"><%=campgrnd.description%></p>
                     </div>
-                <% } %> 
-            </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-muted"><%=campgrnd.location%></li>
+                            <li class="list-group-item">Submitted by <%=campgrnd.author.username%></li>
+                            <li class="list-group-item">$<%=campgrnd.price%>/night</li>
+                            <!-- <li class="list-group-item">A third item</li> -->
+                        </ul>
+                    <% if (currentUser && campgrnd.author.equals(currentUser._id)) { %> 
+                        <div class="card-body">
+                            <a href="/campgrounds/<%=campgrnd._id%>/edit" class="card-link btn btn-info mt-1">
+                                Edit Campgrounds Entry
+                            </a>
+                            <form class="d-inline" action="/campgrounds/<%= campgrnd._id %>?_method=DELETE" method='POST'>
+                                <button class="btn btn-danger mt-1">
+                                    DELETE
+                                </button>     
+                            </form>
+                        </div>
+                    <% } %> 
+                </div>
             <button class="my-3 btn btn-dark">
                 <a href="/campgrounds" class="link-light text-decoration-none">Back to all Campgrounds</a>
             </button>
         </div>
         <div class="col-6">
 
-            <div id='map' style='width: 400px; height: 300px;' class="mb-5"></div>
+            <div id='map' style='width: 100%; height: 50%' class="width-auto mb-5"></div>
             
             <%if(currentUser) {%>
                 <!-- Reviews form -->
