@@ -3,7 +3,7 @@ const cities = require('./cities');
 const { places, descriptors } = require('./seedHelpers');
 const campground = require('../models/campground');
 
-const dbUrl = 'mongodb+srv://firstdb:wpJjjloWvy5AfpDT@cluster0.6stqc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const dbUrl = process.env.SECRET || 'thisshouldbeabettersecret';
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
